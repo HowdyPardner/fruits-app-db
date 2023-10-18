@@ -6,7 +6,8 @@ const mongoose = require('mongoose')
 const fruitSchema = new mongoose.Schema({
     name: String,
     color: String,
-    readyToEat: Boolean
+    readyToEat: Boolean,
+    age: Number
 },
 {
     timestamps: true

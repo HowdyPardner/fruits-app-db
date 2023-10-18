@@ -8,7 +8,7 @@ const Fruits = () => {
     useEffect(() => {
         axios({
             method: "GET",
-            url: "http://localhost:3000/fruits",
+            url: "/server/fruits",
         }).then((res) => {
             console.log(res.data);
             setFruits(res.data)
@@ -18,9 +18,9 @@ const Fruits = () => {
 
     return (
         <div>
-            <ul>
+            <ul className='fruit-list'>
                 {fruits.map((fruit, index) => (
-                    <li key={fruit+index}>
+                    <li className='fruit-item' key={fruit+index}>
                         <p>{fruit.name}</p>
                         <p>{fruit.color}</p>
                         <p>{fruit.readyToEat}</p>
